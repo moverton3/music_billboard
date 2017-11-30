@@ -1,0 +1,14 @@
+<h1>Billboards#show</h1>
+
+  <h1> <%= @billboard.name %> </h1>
+  <!-- <br /> -->
+
+  <p> <%= @billboard.description %> </p>
+  <br />
+
+  	<ul>
+  		<li> <%= link_to 'Edit', edit_billboard_path(@billboard) %> </li>
+  		<li> <%= link_to 'Delete', billboards_path, method: :destroy, data: {confirm: 'Really delete?'} %> </li>
+  	</ul>
+
+<p>Find me in app/views/billboards/show.html.erb</p>
