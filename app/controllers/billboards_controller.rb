@@ -1,14 +1,11 @@
 class BillboardsController < ApplicationController
-before_action :set_billboard, only: [:show, :edit, :update, :delete]
+before_action :set_billboard, only: [:show, :edit, :update, :destroy]
 
   def index
     @billboards = Billboard.all
   end
 
   def show
-  end
-
-  def edit
   end
 
   def new
@@ -24,6 +21,9 @@ before_action :set_billboard, only: [:show, :edit, :update, :delete]
   	end
   end
 
+  def edit
+  end
+
   def update
     if @billboard.update(billboard_params)
       redirect_to billboard_path(@billboard)
@@ -33,7 +33,7 @@ before_action :set_billboard, only: [:show, :edit, :update, :delete]
   end
 
   def destroy
-    @billboard.find(params[:id]).destroy
+    @billboard.destroy
     redirect_to billboards_path
   end
 

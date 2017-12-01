@@ -9,11 +9,13 @@
     </div>
   <% end %>
 <% else %>
-<h4> Create A Billboard!</h4>
+<h4 class="center-align"> No Billboards yet. Create one!</h4>
 <% end %>
 
 <div class="center-align">
-  <div class="waves-effect waves-light btn black">
-    <%= link_to 'Create A Billboard', new_billboard_path %>
+  <div class="fixed-action-btn">
+    <div class="waves-effect waves-light btn black lighten">
+      <%= link_to 'Create A Billboard', new_billboard_path %>
+    </div>
   </div>
 </div>

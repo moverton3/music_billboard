@@ -10,7 +10,7 @@
     <ul>
       <li><%= link_to 'Back to Charts', billboards_path %></li>
   		<li> <%= link_to 'Edit', edit_billboard_path(@billboard) %> </li>
-  		<li> <%= link_to 'Delete', billboards_path, method: :destroy, data: {confirm: 'Really delete?'} %> </li>
+  		<li> <%= link_to 'Delete', billboard_path, method: :delete, data: {confirm: 'Really delete?'} %> </li>
   	</ul>
   </div>
 
