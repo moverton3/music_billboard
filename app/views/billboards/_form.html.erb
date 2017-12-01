@@ -1,8 +1,9 @@
-
-    <%= form_for @billboard do |f| %>
-      <!-- <%= f.label :name %>
-      <%= f.text_field :name, required: true %>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-      <%= f.submit %> -->
-    <% end %>
+<h1><%= @billboard.id ? 'Edit Billboard' : 'Create Billboard'%></h1>
+<hr />
+  <%= form_for @billboard do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :rank %>
+    <%= f.text_field :rank %>
+    <%= f.submit %>
+  <% end %>

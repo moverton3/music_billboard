@@ -1,14 +1,17 @@
-<h1>Billboards#show</h1>
+<h2 class="center align">Billboard Chart</h2>
 
-  <h1> <%= @billboard.name %> </h1>
-  <!-- <br /> -->
+  <div class="center align">
+    <h3> <%= @billboard.title %> </h3>
+    <h3> <%= @billboard.rank %> </h3>
+  </div>
 
-  <p> <%= @billboard.description %> </p>
-  <br />
 
-  	<ul>
+  <div class="center align">
+    <ul>
+      <li><%= link_to 'Back to Charts', billboards_path %></li>
   		<li> <%= link_to 'Edit', edit_billboard_path(@billboard) %> </li>
   		<li> <%= link_to 'Delete', billboards_path, method: :destroy, data: {confirm: 'Really delete?'} %> </li>
   	</ul>
+  </div>
 
-<p>Find me in app/views/billboards/show.html.erb</p>
+<!-- <p>Find me in app/views/billboards/show.html.erb</p> -->

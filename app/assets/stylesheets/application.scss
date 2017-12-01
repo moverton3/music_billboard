@@ -1,3 +1,17 @@
+@import "materialize";
+
+.page_container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+input.placeholder {
+  text-align: center;
+}
+
+input[type=text] {
+  text-align: center;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

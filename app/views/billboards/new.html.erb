@@ -1,5 +1,19 @@
-<h1> Create A Billboard </h1>
+<h1 class="center align">Enter Billboard Entry</h1>
 
-<%= render(partial: 'form') %>
+<div class="center align">
+  <%= form_for @billboard do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      <%= f.label :rank %>
+      <%= f.text_field :rank %>
+    <div class="center align">
+      <%= f.submit "Submit Billboard Entry", class: "waves-effect waves-light btn black" %>
+    </div>
+  <% end %>
+</div>
 
-<p>Find me in app/views/billboards/new.html.erb</p>
+<div class="center align">
+  <%= link_to 'Back to Charts', billboards_path %>
+</div>
+
+<!-- <p>Find me in app/views/billboards/new.html.erb</p> -->

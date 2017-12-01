@@ -1,17 +1,19 @@
-<h1>Billboard Top Charts</h1>
+<h1 class="center-align">Billboard Charts</h1>
 
 <% if @billboards.any? %>
   <% @billboards.each do |billboard| %>
-    <div class='collection'>
-      <%= link_to billboard.name, billboard_path(billboard) %>
+    <div class="center-align">
+      <ul>
+        <li><%= link_to billboard.title, billboard_path(billboard) %></li>
+      </ul>
     </div>
   <% end %>
 <% else %>
 <h4> Create A Billboard!</h4>
 <% end %>
 
-<div class='collection'>
-<%= link_to 'Create A Billboard', new_billboard_path %>
+<div class="center-align">
+  <div class="waves-effect waves-light btn black">
+    <%= link_to 'Create A Billboard', new_billboard_path %>
+  </div>
 </div>
-
-<p>Find me in app/views/billboards/index.html.erb</p>
